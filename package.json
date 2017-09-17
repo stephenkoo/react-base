@@ -26,7 +26,7 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test:lint:js": "eslint --ext=js --ext=jsx .",
-    "test:lint:scss": "stylelint '**/*.scss'",
+    "test:lint:scss": "stylelint --config=.stylelintrc '**/*.scss'",
     "test:unit": "react-scripts test --env=jsdom",
     "test": "run-s test:**",
     "eject": "react-scripts eject",
