@@ -13,7 +13,13 @@
     "react-scripts": "1.0.13"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,scss,sass,css}": [
+    "src/**/*.{js,jsx,json}": [
+      "eslint --fix",
+      "prettier --config .prettierrc --write",
+      "git add"
+    ],
+    "src/**/*.{scss,css}": [
+      "stylelint --config=.stylelintrc --fix",
       "prettier --config .prettierrc --write",
       "git add"
     ]
